@@ -3,14 +3,13 @@
 stop = False
 number = 10
 while not stop:
-    for i in range(1, 11):
-        if number % i != 0:
-            continue
+    result = []
+    for i in range(1, 21):
+        if number % i == 0:
+            result.append(True)
         else:
-            if i == 10:
-                print(number)
-                stop = True
-            else:
-                continue
+            result.append(False)
+    if False not in result:
+        stop = True
+        print(number)
     number += 1
-print(number)
